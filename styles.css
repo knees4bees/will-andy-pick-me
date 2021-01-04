@@ -31,6 +31,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .form {
@@ -44,7 +45,6 @@ input {
   height: 5vh;
   margin: 5px 0;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
 
@@ -66,6 +66,25 @@ input {
   max-width: 9vw;
 }
 
+.results {
+  text-align: center;
+}
+
+.question {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: bolder;
+  margin: 0 auto;
+  padding: 3px 0;
+}
+
+.answer {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 auto;
+  padding: 3px 0;
+}
+
 .clear-button-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -82,4 +101,12 @@ input {
 .woody {
   height: 55vh;
   margin-left: 7vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.red {
+  background-color: #DE4841;
 }
