@@ -13,16 +13,22 @@ function getRandomIndex(array) {
 }
 
 function displayAnswer() {
-  event.preventDefault();
-  var question = askQuestionInput.value;
-  var answer = answers[getRandomIndex(answers)];
-  userQuestion.innerText = `"${question}?"`;
-  theAnswer.innerText = answer;
-  eightBall.classList.toggle('hidden');
-  userQuestion.classList.toggle('hidden');
-  theAnswer.classList.toggle('hidden');
-  askQuestionInput.value = '';
-  clearButton.classList.toggle('red');
+  if (askQuestionInput.value) {
+    event.preventDefault();
+    var question = askQuestionInput.value;
+    var answer = answers[getRandomIndex(answers)];
+    userQuestion.innerText = `"${question}?"`;
+    theAnswer.innerText = answer;
+    eightBall.classList.toggle('hidden');
+    userQuestion.classList.toggle('hidden');
+    theAnswer.classList.toggle('hidden');
+    askQuestionInput.value = '';
+    clearButton.classList.toggle('red');
+    askQuestionInput.placeholder = '';
+  } else {
+    event.preventDefault();
+    askQuestionInput.placeholder = "Please enter a question";
+  }
 }
 
 function clearResults() {
